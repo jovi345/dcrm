@@ -13,11 +13,15 @@ class SignUpForm(UserCreationForm):
     )
     first_name = forms.CharField(
         max_length=100,
-        attrs={"class": "form-control", "placeholder": "First Name"},
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "First Name"},
+        ),
     )
     last_name = forms.CharField(
         max_length=100,
-        attrs={"class": "form-control", "placeholder": "Last Name"},
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Last Name"},
+        ),
     )
 
     class Meta:
